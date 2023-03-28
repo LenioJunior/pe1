@@ -2,17 +2,14 @@
 
 int main()
 {
-    int idade;
+    char codigo = 'D';
+    int idade = 18;
+    char sexo = 'F';
+    int ano = 2000;
+    double v = 13.5;
 
-    printf("Informe um numero: \n");
-    scanf("%d", &idade);
-
-    if(idade >= 18){
-        printf("Maior de idade.\n");
-        printf("Mais algum codigo.\n");
-    } else {
-        printf("Voce e menor de idade");
-    }
-    
-    printf("Fim");
+    if(idade != 18 || sexo != 'M' && 
+        (ano > 2001 && codigo == 'D')){
+        printf("Entrou no IF.\n");
+    } 
 }
