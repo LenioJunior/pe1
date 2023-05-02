@@ -43,7 +43,8 @@ Saída:
 5 ==> 125
 */
 void questao2(){
-    int inf, sup, resultado, expoente;
+    int inf, sup, expoente;
+    double resultado;
 
     printf("Informe o limite inferior:\n");
     scanf("%d", &inf);
@@ -58,7 +59,7 @@ void questao2(){
         {
             expoente = cont % 2 == 0 ? 2 : 3;
             resultado = pow(cont, expoente);           
-            printf("%d ==> %d\n", cont, resultado);
+            printf("%d ==> %0.lf\n", cont, resultado);
         }        
     }    
 }
