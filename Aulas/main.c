@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(){
+int main() {
     int num1, num2, soma, subtracao, multiplicacao, divisao;
 
     printf("Informe o primeiro numero:");
