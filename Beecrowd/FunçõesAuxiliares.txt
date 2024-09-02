@@ -1,0 +1,34 @@
+int comp(const void *a, const void *b)
+{
+    return *(int *)a - *(int *)b;
+}
+
+int pesquisa(int marmores[], int numMarmores, int valor){
+    int inicio = 0;
+    int fim = numMarmores;
+
+    while (inicio < fim)
+    {
+        int meio = (inicio + fim) / 2;
+        if (marmores[meio] < valor)
+            inicio = meio + 1;
+        else
+            fim = meio;
+    }
+    return marmores[inicio] == valor ? inicio + 1 : -1;    
+}
+
+// Antes de efetuar a busca, o vetor deve estar ordenado. 
+// Embora tenhamos aprendido como ordenar um vetor utilizando 'for', este método é muito lento.
+// Para solucionar o problema, utilize a função abaixo:
+// qsort(marmores, numMarmores, sizeof(int), comp);
+// Onde marmores é o vetor de mármores
+// numMarmores é a quantidade de itens no vetor de mármores
+// sizeof(int) informa qual o tamanho de cada elemento do vetor, no caso um vetor de inteiros
+// comp é o nome da 1ª função que se encontra neste arquivo.
+
+// Para realizar a pesquisa de um determinado mármore, utilizar a função 'pesquisa' da seguinte maneira:
+// pesquisa(marmores, numMarmores, numero);
+// Onde marmores é o vetor de mármores
+// numMarmores é a quantidade de itens no vetor de mármores
+// valor é o elemento que está sendo buscado no vetor.
